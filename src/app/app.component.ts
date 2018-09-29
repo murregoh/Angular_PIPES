@@ -7,18 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  name = 'Mateo';
-  name2 = 'MaTeo UrReGo Hoyos RuEda mOnToYa';
-
+  name: string = 'Mateo';
+  name2: string = 'MaTeo UrReGo Hoyos RuEda mOnToYa';
+  video: string = 'uO8vRa3t4J4';
+  date: Date = new Date();
+  buttonValue: boolean = true;
   PI = Math.PI;
+  array: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  a: number = 0.234;
+  salary: number = 1234.5678;
 
-  array = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-  a = 0.234;
-
-  salary = 1234.5678;
-
-  hero = {
+  hero: object = {
     nombre: 'Logan',
     clave: 'Wolverine',
     edad: 500,
@@ -30,10 +29,8 @@ export class AppComponent {
     }
   };
 
-  promiseValue = new Promise( ( resolve, reject ) => {
+  promiseValue: Promise<{}> = new Promise( ( resolve, reject ) => {
     setTimeout(() => resolve('Data is done'), 3500);
   });
-
-  date = new Date();
 
 }

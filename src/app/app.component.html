@@ -82,8 +82,21 @@
             </tr>
             <tr>
                 <td>{{ name2 }}</td>
+                <td>titlecase</td>
+                <td> {{ name2 | titlecase }} </td>
+            </tr>
+            <tr>
+                <td>{{ name2 }}</td>
                 <td>Creating new pipe: Capitalizado</td>
                 <td> {{ name2 | capitalizado: true }} </td>
+            </tr>
+            <tr>
+                <td>{{ name }}</td>
+                <td>password: {{ buttonValue }}
+                    <br>
+                    <hr>
+                    <button type="button" (click)="buttonValue = !buttonValue" class="btn btn-outline-primary btn-block">Activate/Desactivate</button></td>
+                <td> {{ name | password : buttonValue }} </td>
             </tr>
 
         </tbody>
@@ -102,6 +115,11 @@
         <pre>
             {{ hero | json }}
         </pre>
+        <br>
+        <h4>Youtube <small>video</small></h4>
+        <hr>
+        <iframe width="560" height="315" [src]=" video | domseguro: 'https://www.youtube.com/embed/' " frameborder=" 0 " allow="autoplay; encrypted-media " allowfullscreen></iframe>
+        <br>
     </div>
 
     <br>

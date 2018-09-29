@@ -19,7 +19,5 @@ export class CapitalizadoPipe implements PipeTransform {
             this.nombre = valueArray[0][0].toLocaleUpperCase() + value.substr(1).toLowerCase();
             return this.nombre.trim();
         }
-
-
     }
 }
